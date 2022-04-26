@@ -11,6 +11,6 @@ COPY . /tmp_rails
 # puma.sockの置き場所
 RUN mkdir -p tmp/sockets
 
-VOLUME /hr_labo/public
-VOLUME /hr_labo/tmp
+VOLUME /tmp_rails/public
+VOLUME /tmp_rails/tmp
 
