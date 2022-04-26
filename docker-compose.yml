@@ -27,16 +27,15 @@ services:
       sleep 5 &&
       rails db:create &&
       rake ridgepole:apply && 
-      rake assets:precompile &&
-      bundle exec puma -C config/puma.rb"
+      rails s"
     volumes:
       - .:/tmp_rails
       - public-data:/tmp_rails/public
       - tmp-data:/tmp_rails/tmp
       - log-data:/tmp_rails/log
     environment:
-      RAILS_ENV: staging
-      RAILS_LOG_TO_STDOUT: staging
+      RAILS_ENV: development
+      RAILS_LOG_TO_STDOUT: hoge
       DATABASE_USERNAME: root
       DATABASE_PASSWORD: password
       TZ: Asia/Tokyo
